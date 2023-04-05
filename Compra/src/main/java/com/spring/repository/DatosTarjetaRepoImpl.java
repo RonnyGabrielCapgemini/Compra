@@ -10,7 +10,7 @@ public class DatosTarjetaRepoImpl implements DatosTarjetaRepository {
 	@Override
 	public DatosTarjeta pasar(DatosTarjeta datos) {
 		
-		return null;
+		return datos;
 	}
 	
 

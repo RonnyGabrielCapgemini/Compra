@@ -34,6 +34,7 @@ public class CustomErrorJson {
 		this.timestamp = "";
 		this.status = 0;
 		this.error = "";
+		this.info=new DatosTarjeta();
 		this.message = new ArrayList<>();
 		
 	}
