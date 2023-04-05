@@ -36,7 +36,7 @@ public class DatosTarjetaController {
 	@Autowired
 	private DatosTarjetaService serv;
 	
-	@Operation(summary = "", description = "", tags= {"compra"})
+	@Operation(summary = "", description = "", tags= {"datosTarjeta"})
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Transacción correta", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = DatosTarjeta.class)) }),
