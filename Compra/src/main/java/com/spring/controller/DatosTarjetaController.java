@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.spring.model.DatosTarjeta;
+import com.spring.response.DatosTarjetaDTO;
 import com.spring.service.DatosTarjetaService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -44,11 +45,12 @@ public class DatosTarjetaController {
 			@ApiResponse(responseCode = "400", description = "No se encuentran los datos del cliente", content = @Content),
 			@ApiResponse(responseCode = "500", description = "El sistema se encuentra inestable", content = @Content)})
 	
-	@PostMapping("/user")
-	public ResponseEntity<DatosTarjeta> pasar(@RequestBody DatosTarjeta datosTarjeta ) {
+	@PostMapping("/save")
+	public String pasar(@RequestBody DatosTarjeta datosTarjeta ) {
 		
-		DatosTarjeta DatosTarjetaNew = serv.pasar(datosTarjeta);
-		return ResponseEntity.ok(DatosTarjetaNew);
+		DatosTarjetaDTO DatosTarjetaNew = serv.pasar(datosTarjeta);
+		
+		return serv.errores(DatosTarjetaNew);
 		
 	}
 }
