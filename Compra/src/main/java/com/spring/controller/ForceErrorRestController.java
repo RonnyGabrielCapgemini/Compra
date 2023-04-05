@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ForceErrorRestController {
 	
-	@GetMapping(value = "/students/throwException")
+	@GetMapping(value = "/datosTarjeta/throwException")
     public void throwException() {
         throw new IllegalArgumentException("\"I am the error message from Rest Controller\"");
     }
