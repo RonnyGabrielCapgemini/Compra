@@ -44,7 +44,7 @@ public class DatosTarjetaController {
 			@ApiResponse(responseCode = "400", description = "No se encuentran los datos del cliente", content = @Content),
 			@ApiResponse(responseCode = "500", description = "El sistema se encuentra inestable", content = @Content)})
 	
-	@PostMapping
+	@PostMapping("/user")
 	public ResponseEntity<DatosTarjeta> pasar(@RequestBody DatosTarjeta datosTarjeta ) {
 		
 		DatosTarjeta DatosTarjetaNew = serv.pasar(datosTarjeta);
