@@ -39,7 +39,8 @@ public class CustomErrorAttributes extends DefaultErrorAttributes {
 			}
 
 		
-			errorAttributes.put("infoadicional", "informacion adicional");		
+			errorAttributes.put("infoadicional", "informacion adicional");
+			
 
 			return errorAttributes;
 		}
